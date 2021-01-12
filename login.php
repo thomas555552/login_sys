@@ -29,8 +29,6 @@ if (isset($_POST['login'])){
     <meta charset="UTF-8" />
     <title>Login System</title>
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="stylesheet" type="text/css" href="css/style2.css" />
-    <link rel="stylesheet" type="text/css" href="css/animate-custom.css" />
 </head>
 <body>
 <div class="container">

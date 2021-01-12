@@ -38,5 +38,10 @@ class loginDB
             return false;
         }
     }
+
+    public function UserLogout(){
+        session_destroy();
+        header("location:login.php");
+    }
 }
 
