@@ -16,8 +16,7 @@ if (isset($_POST['login'])){
         header("location:protected.php");
     }
     else {
-        echo "NEM SIKERULT";
-        //TODO style kell ide majd
+        echo '<script>alert("Nem talalhato ilyen felhasznalonev")</script>';
     }
 }
 
@@ -26,42 +25,38 @@ if (isset($_POST['login'])){
 <!DOCTYPE html>
 <html lang="hu">
 <head>
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <title>Login System</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css" />
 </head>
 <body>
-<div class="container">
-    <header>
-        <h1>Login and Registration Form  </h1>
-    </header>
-    <section>
-        <div id="container_demo" >
 
-            <a class="hiddenanchor" id="tologin"></a>
-            <div id="wrapper">
-                <div id="login" class="animate form">
-                    <form name="login" method="post" action="">
-                        <h1>Log in</h1>
-                        <p>
-                            <label for="username" class="youmail" data-icon="e" > Your email</label>
-                            <input id="username" name="username" required="required"  placeholder="username"/>
-                        </p>
-                        <p>
-                            <label for="password" class="youpasswd" data-icon="p"> Your password </label>
-                            <input id="password" name="password" required="required" type="password" placeholder="eg. X8df!90EO" />
-                        </p>
-                        <p class="login button">
-                            <input type="submit" name="login" value="login" />
-                        </p>
+<header class="header">
 
-                    </form>
-                </div>
+    <div class="box">
+        <h1 class="primary">
+            <span class="primary-text">Bejelentkezes:</span>
+        </h1>
+
+        <form name="login" id="login" method="post" action="">
+            <p>
+                <label for="username" class="label" > Username: </label>
+                <input id="username" class="text-input" name="username" required="required" type="text" placeholder="Username"/>
+            </p>
+            <p>
+                <label for="password" class="label" > Password: </label>
+                <input id="password" name="password"class="text-input" required="required" type="password" placeholder="Password" />
+            </p>
+
+            <input type="submit"  class="btn" name="login" value="Login" />
+
+        </form>
+    </div>
 
 
-            </div>
-        </div>
-    </section>
-</div>
+</header>
+
+
 </body>
 </html>
